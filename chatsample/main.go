@@ -12,9 +12,9 @@ import (
 
 	kitlog "github.com/go-kit/log"
 
-	"github.com/philippseith/signalr"
-	"github.com/philippseith/signalr/chatsample/middleware"
-	"github.com/philippseith/signalr/chatsample/public"
+	"github.com/mvdslot/signalr"
+	"github.com/mvdslot/signalr/chatsample/middleware"
+	"github.com/mvdslot/signalr/chatsample/public"
 )
 
 type chat struct {
