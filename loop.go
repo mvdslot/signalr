@@ -181,7 +181,6 @@ func (l *loop) GetNewID() string {
 }
 
 func (l *loop) handleInvocationMessage(invocation invocationMessage) {
-	_ = l.dbg.Log(evt, msgRecv, msg, fmtMsg(invocation))
 	// Transient hub, dispatch invocation here
 	if method, ok := getMethod(l.party.invocationTarget(l.hubConn), invocation.Target); !ok {
 		// Unable to find the method

@@ -3,9 +3,9 @@ module github.com/philippseith/signalr
 go 1.16
 
 require (
-	github.com/cenkalti/backoff/v4 v4.1.2
+	github.com/cenkalti/backoff/v4 v4.2.0
 	github.com/dave/jennifer v1.4.1
-	github.com/go-kit/log v0.2.0
+	github.com/go-kit/log v0.2.1
 	github.com/google/uuid v1.3.0
 	github.com/onsi/ginkgo v1.12.1
 	github.com/onsi/gomega v1.11.0
@@ -17,6 +17,7 @@ require (
 
 require (
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
-	github.com/klauspost/compress v1.13.6 // indirect
+	github.com/go-logfmt/logfmt v0.6.0 // indirect
+	github.com/klauspost/compress v1.16.3 // indirect
 	golang.org/x/text v0.3.8 // indirect
 )
