@@ -246,7 +246,6 @@ func (l *loop) returnInvocationResult(invocation invocationMessage, result []ref
 }
 
 func (l *loop) handleStreamItemMessage(streamItemMessage streamItemMessage) error {
-	_ = l.dbg.Log(evt, msgRecv, msg, fmtMsg(streamItemMessage))
 	if err := l.streamClient.receiveStreamItem(streamItemMessage); err != nil {
 		switch t := err.(type) {
 		case *hubChanTimeoutError:
@@ -260,7 +259,6 @@ func (l *loop) handleStreamItemMessage(streamItemMessage streamItemMessage) erro
 }
 
 func (l *loop) handleCompletionMessage(message completionMessage) error {
-	_ = l.dbg.Log(evt, msgRecv, msg, fmtMsg(message))
 	var err error
 	if l.streamClient.handlesInvocationID(message.InvocationID) {
 		err = l.streamClient.receiveCompletionItem(message, l.invokeClient)

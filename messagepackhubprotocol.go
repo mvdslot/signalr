@@ -372,7 +372,6 @@ func (m *messagePackHubProtocol) WriteMessage(message interface{}, writer io.Wri
 	if _, err := frameBuf.Write(lenBuf[:lenLen]); err != nil {
 		return err
 	}
-	_ = m.dbg.Log(evt, "Write", msg, fmt.Sprintf("%#v", message))
 	_, _ = frameBuf.ReadFrom(buf)
 	_, err := frameBuf.WriteTo(writer)
 	return err

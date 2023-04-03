@@ -7,6 +7,7 @@ require (
 	github.com/go-kit/log v0.2.1
 	github.com/gorilla/mux v1.8.0
 	github.com/julienschmidt/httprouter v1.3.0
+	github.com/mvdslot/signalr v0.0.0-20230403165820-98bb42dbd119
 	github.com/onsi/ginkgo v1.12.1
 	github.com/onsi/gomega v1.11.0
 )
@@ -16,7 +17,6 @@ require (
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/klauspost/compress v1.16.3 // indirect
-	github.com/mvdslot/signalr v0.0.0-20230403165820-98bb42dbd119 // indirect
 	github.com/nxadm/tail v1.4.8 // indirect
 	github.com/teivah/onecontext v1.3.0 // indirect
 	github.com/vmihailenco/msgpack/v5 v5.3.5 // indirect
