@@ -57,9 +57,9 @@ func (j *jsonHubProtocol) UnmarshalArgument(src interface{}, dst interface{}) er
 	if err := json.Unmarshal(rawSrc, dst); err != nil {
 		return &jsonError{string(rawSrc), err}
 	}
-	_ = j.dbg.Log(evt, "UnmarshalArgument",
-		"argument", string(rawSrc),
-		"value", fmt.Sprintf("%v", reflect.ValueOf(dst).Elem()))
+	// _ = j.dbg.Log(evt, "UnmarshalArgument",
+	// 	"argument", string(rawSrc),
+	// 	"value", fmt.Sprintf("%v", reflect.ValueOf(dst).Elem()))
 	return nil
 }
 
