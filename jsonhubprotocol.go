@@ -72,7 +72,6 @@ func (j *jsonHubProtocol) ParseMessages(reader io.Reader, remainBuf *bytes.Buffe
 	messages = make([]interface{}, 0)
 	for _, frame := range frames {
 		err = json.Unmarshal(frame, &message)
-		_ = j.dbg.Log(evt, "read", msg, string(frame))
 		if err != nil {
 			return nil, &jsonError{string(frame), err}
 		}
@@ -207,7 +206,6 @@ func (j *jsonHubProtocol) WriteMessage(message interface{}, writer io.Writer) er
 		return err
 	}
 	b = append(b, 0x1e)
-	_ = j.dbg.Log(evt, "write", msg, string(b))
 	_, err = writer.Write(b)
 	return err
 }
