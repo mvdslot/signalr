@@ -45,7 +45,6 @@ func (h *httpMux) handlePost(writer http.ResponseWriter, request *http.Request) 
 		writer.WriteHeader(http.StatusBadRequest)
 		return
 	}
-	info, _ := h.server.prefixLoggers("")
 	for {
 		h.mx.RLock()
 		c, ok := h.connectionMap[connectionID]
